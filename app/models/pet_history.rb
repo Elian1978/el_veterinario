@@ -1,2 +1,4 @@
 class PetHistory < ApplicationRecord
-end
+    belongs_to :pet
+    delegate :name, to: :pet, prefix: true
+  end
